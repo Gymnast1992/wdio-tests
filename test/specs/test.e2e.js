@@ -153,4 +153,28 @@ describe('Webdriverio main page', () => {
     //     let footerIsDisplayedInViewport = await footer.isDisplayedInViewport()
     //     console.log("Is footer displayed in viewport: " + footerIsDisplayedInViewport)
     // })
+
+    // it("should show if an element is enabled", async () => {
+    //     await browser.url(`https://webdriver.io`);
+
+    //     const getStartedButton = await $(`.button[href="/docs/gettingstarted"]`)
+    //     let isEnabled = await getStartedButton.isEnabled()
+    //     console.log("Is get started button enable: " + isEnabled)
+
+    // })
+
+    // it("should show is an element is focused", async () => {
+    //     await browser.url(`https://webdriver.io`);
+
+    //     const getStartedButton = await $(`.button[href="/docs/gettingstarted"]`)
+    //     let isFocused = await getStartedButton.isFocused()
+    //     console.log("Is get started button focused before click" + isFocused)
+
+    //     await browser.pause(2000)
+    //     await getStartedButton.click()
+    //     console.log("Is get started button focused after click" + isFocused)
+    //     await browser.pause(2000)
+
+    // })
+    
 });
