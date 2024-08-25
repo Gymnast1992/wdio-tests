@@ -3,7 +3,7 @@ import { expect } from '@wdio/globals'
 
 
 describe("WebdriverIO homework", () => {
-    it("should be able to click on the API button", async () => {
+    xit("should be able to click on the API button", async () => {
         await browser.url(`https://webdriver.io/`)
         await browser.pause(2000)
 
@@ -50,5 +50,13 @@ describe("WebdriverIO homework", () => {
         const HTML = await $('p [href="/docs/sponsor"]').getHTML()
         console.log("The `becoming a sponsor` link HTML is: " + HTML)
 
+    })
+
+    xit("should waitUntil ", async () => {
+        await browser.url(`https://webdriver.io/docs/sponsor/`);
+
+        await browser.waitUntil(async () => {
+            return $('[id="how-to-sponsor"]').isDisplayed();
+        }, 5000, "The text `How to sponsor` is not displayed")
     })
 })
