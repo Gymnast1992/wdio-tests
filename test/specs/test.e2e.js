@@ -217,13 +217,13 @@
 //         }, 5000, "Button is not displayed")
 //     })
 
-//     // it("should het html for certain elements", async () => {
-//     //     await browser.url(`https://webdriver.io`);
+    // it("should get html for certain elements", async () => {
+    //     await browser.url(`https://webdriver.io`);
 
-//     //     const outerHTML = await $('.dropdown__menu').getHTML()
-//     //     console.log("outerHTML : " + outerHTML)
+    //     const outerHTML = await $('.dropdown__menu').getHTML()
+    //     console.log("outerHTML : " + outerHTML)
 
-//     //     const innerHTML = await $('.dropdown__menu').getHTML(false)
-//     //     console.log("innerHTML: " + innerHTML)
-//     // })
+    //     const innerHTML = await $('.dropdown__menu').getHTML(false)
+    //     console.log("innerHTML: " + innerHTML)
+    // })
 // });
