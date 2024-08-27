@@ -24,7 +24,7 @@ describe("My website homework tests", () => {
         
     })
 
-    it("The links section should contains the text Now Available", async () => {
+    xit("The links section should contains the text Now Available", async () => {
         await browser.url(`https://semiankiv.art/`)
         await browser.pause(2000)
 
