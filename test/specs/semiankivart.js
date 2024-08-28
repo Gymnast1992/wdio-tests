@@ -1,15 +1,14 @@
 
 import { expect } from '@wdio/globals'
+import HomePage from "../pom/home-page"
 
 
 describe("My website homework tests", () => {
-    xit("should be able to click on the Read More button", async () => {
+    it("should be able to click on the Read More button", async () => {
         await browser.url(`https://semiankiv.art/`)
         await browser.pause(2000)
 
-
-        let readMoreButton = await $('//*[text()="Read more"]')
-        await readMoreButton.click()
+        await HomePage.clickOnReadMoreBtn()
         await browser.pause(2000)
 
     })

@@ -33,7 +33,7 @@ describe("WebdriverIO homework", () => {
 
     })
 
-    xit("the link should be clickable ", async () => {
+    xit("the link `becoming a sponsor` should be clickable ", async () => {
         await browser.url(`https://webdriver.io`);
 
         const theLink = await $('p [href="/docs/sponsor"]')
