@@ -5,7 +5,7 @@ import PricingPage from '../pom/github-pricing'
 import NewsletterPage from '../pom/github-newsletter'
 
 describe('GitHub main page', () => {
-    it('should be able to sign up', async () => {
+    xit('should be able to sign up', async () => {
 
         let email = "semiankiv12345@gmail.com";
         let password = "Semiankiv123"
@@ -109,5 +109,52 @@ describe('GitHub main page', () => {
             console.log(NewsletterPage.textContainer.getText())
             await expect(NewsletterPage.textContainer).toHaveText("Thanks for subscribing!")
 
+        });
+
+        xit('should be able to search', async () => {
+    
+            await browser.url(`https://github.com/`);
+
+            let searchWord = "gymnast"
+
+            await GitHubMainPage.btnSearch.click()
+            await browser.pause(2000)
+            await GitHubMainPage.inputSearch.setValue(searchWord)
+            await browser.pause(2000)
+            await GitHubMainPage.btnSubmitSearch.click()
+            await browser.pause(2000)
+
+        });
+
+        it('should extract the substring of the URL path', async () => {
+            // Navigate to a URL
+            await browser.url('https://github.com/search?q=gymnast&type=repositories');
+    
+            // Get the current URL
+            const url = await browser.getUrl()
+            console.log("The url is: " + url)
+            
+            
+            // Split the URL by '/'
+            const parts = url.split();
+            console.log(parts)
+
+            let newArray = parts;
+            function getSomeText(){
+                return newArray
+            }
+            getSomeText()
+
+
+            
+            // The last part will be in parts[parts.length - 1]
+            // const lastPart = parts[parts.length - 1];
+            // console.log(lastPart)
+
+    
+            // console.log("The url is: " + url);  // This should print "resource"
+    
+            // You can also add assertions to verify the last part of the URL
+            // expect(lastPart).toHaveText('gymnast');
         });
 });

@@ -12,6 +12,9 @@ class GitHubMainPage {
     get preferencesContinueBtn() {return $('[data-continue-to="captcha-and-submit-container"]')}
     get header2() {return $('[class="h2-mktg mb-5"]')}
     get btnSignUp() {return $('.HeaderMenu-link--sign-up')}
+    get btnSearch() {return $('[class="search-input"]')}
+    get inputSearch() {return $('#query-builder-test')}
+    get btnSubmitSearch() {return $('[class="ActionListItem-descriptionWrap"]')}
 
     // async function() {
         
